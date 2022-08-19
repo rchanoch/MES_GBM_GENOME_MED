@@ -21,9 +21,14 @@ MES_sigs_makeup<- function(MES_Sigs_List,MES_functional_list)
 
 # get_score_dist
 returns the distribution of scores + shuffled scores for a given signature
+tpm matrices downloaded from published datasets:
+* Neftel C, Laffy J, Filbin MG, Hara T, Shore ME, Rahme GJ, et al. An Integrative Model of Cellular States, Plasticity, and Genetics for Glioblastoma. Cell 2019
+* Couturier CP, Ayyadhury S, Le PU, Nadaf J, Monlong J, Riva G, et al. Single-cell RNA-seq reveals that glioblastoma recapitulates a normal neurodevelopmental hierarchy. Nat Commun 2020
+* Wang L, Babikir H, Müller S, Yagnik G, Shamardani K, Catalan F, et al. The Phenotypes of Proliferating Glioblastoma Cells Reside on a Single Axis of Variation. Cancer Discov 2019
+* Yuan J, et al. Single-cell transcriptome analysis of lineage diversity in high-grade glioma. Genome Medicine 2018
 
 ```
-# tpm_matrix for each study downloaded from original publications and subset to include only malignant cells and 2000+ detected genes
+# tpm_matrix subset to include only malignant cells and 2000+ detected genes
 # cell_type_df = metadata including cell name and patient of origin
 # signature = name of signature from MES_functional_list in question
 

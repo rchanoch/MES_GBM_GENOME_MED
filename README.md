@@ -2,8 +2,9 @@
 "­­Elucidating the diversity of malignant mesenchymal states in glioblastoma by integrative analysis"
 
 ##### MES_sigs_makeup #### returns a dataframe with the percentage of genes from each core or function-specific MES signature that are included in each of the published MES signatures 
-# MES_Sigs_List = Table S1 of manuscript
-# MES_functional_list = Table S2 of manuscript
+
+* MES_Sigs_List = Table S1 of manuscript
+* MES_functional_list = Table S2 of manuscript
 
 MES_sigs_makeup<- function(MES_Sigs_List,MES_functional_list)
 {
@@ -18,9 +19,9 @@ return(sigs_makeup_df)
 }
 
 ##### get_score_dist #####  returns the distribution of scores + shuffled scores for a given signature
-# tpm_matrix for each study downloaded from original publications and subset to include only malignant cells and 2000+ detected genes
-# cell_type_df = metadata including cell name and patient of origin
-# signature = name of signature from MES_functional_list in question
+* tpm_matrix for each study downloaded from original publications and subset to include only malignant cells and 2000+ detected genes
+* cell_type_df = metadata including cell name and patient of origin
+* signature = name of signature from MES_functional_list in question
 
 
 get_score_dist<- function(tpm_matrix, cell_type_df, signature=NULL, threshold=.99)
@@ -98,9 +99,9 @@ cor_expression<- function(score_matrix, cell_type_df)
 
 
 ##### TCGA_associations ##### returns the correlation of expression of MES CORE with T-cell/macrophage specific genes expression in TCGA bulk RNA seq
-# TCGA_log_tpm = normalized log tpm expression matrix downloaded from TCGA RNA-seq dataset
-# t_cell_specific_genes = genes that are at least 8-fold higher expressed in T-cells than in any other cell-type, as previously described in Hara et al
-# macrophage_specific_genes = genes that are at least 8-fold higher expressed in T-cells than in any other cell-type, as previously described in Hara et al
+* TCGA_log_tpm = normalized log tpm expression matrix downloaded from TCGA RNA-seq dataset
+* t_cell_specific_genes = genes that are at least 8-fold higher expressed in T-cells than in any other cell-type, as previously described in Hara et al
+* macrophage_specific_genes = genes that are at least 8-fold higher expressed in T-cells than in any other cell-type, as previously described in Hara et al
 
 
 TCGA_associations<- function(TCGA_log_tpm,t_cell_specific_genes,macrophage_specific_genes)
@@ -117,8 +118,8 @@ TCGA_associations<- function(TCGA_log_tpm,t_cell_specific_genes,macrophage_speci
 
 
 ##### TCGA_correlations ##### returns the correlation of each MES states with feature, and the partial correlation of each MES state with the MES CORE score for the feature in TCGA bulk RNA seq
-# TCGA_log_tpm = normalized log tpm expression matrix downloaded from TCGA RNA-seq dataset
-# feature = signature of T cell/macrophage state in question
+* TCGA_log_tpm = normalized log tpm expression matrix downloaded from TCGA RNA-seq dataset
+* feature = signature of T cell/macrophage state in question
 
 
 TCGA_correlations<- function(TCGA_log_tpm, feature)

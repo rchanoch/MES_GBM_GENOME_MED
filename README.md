@@ -1,4 +1,4 @@
-This resource provides the R code used in the analysis described in Chanoch-Myers, R et al. Elucidating the diversity of malignant mesenchymal states in glioblastoma by integrative analysis. Genome Med (2022).
+This resource provides the R code used in the analysis described in Chanoch-Myers, R et al. Elucidating the diversity of malignant mesenchymal states in glioblastoma by integrative analysis. Genome Med (under review).
 
 For questions, please contact ronychanoch@gmail.com
 

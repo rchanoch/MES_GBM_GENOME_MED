@@ -91,7 +91,7 @@ cor_expression<- function(score_matrix, cell_type_df)
 ```
 
 # TCGA_associations
-returns the correlation of expression of MES CORE with T-cell/macrophage specific genes expression in TCGA bulk RNA seq
+returns the correlation of expression of MES CORE with T-cell/macrophage specific genes expression in bulk RNA seq tpm matrices downloaded from The Cancer Genome Atlas (TCGA)
 
 ```
 # TCGA_log_tpm = normalized log tpm expression matrix downloaded from TCGA RNA-seq dataset
